@@ -6,9 +6,6 @@ from langchain.chains import LLMChain
 import requests
 
 os.environ["OPENAI_API_KEY"] = "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"
-
-
-
 apiInput = input("Please give the Input to generate a LinkedIn post with image? ")
 
 llm = OpenAI(temperature=0.9)
