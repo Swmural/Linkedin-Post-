@@ -4,7 +4,7 @@ from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 import requests
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "API_KEY"
 apiInput = input("Please give the Input to generate a LinkedIn post with image? ")
 
 llm = OpenAI(temperature=0.9)
@@ -18,7 +18,7 @@ chain = LLMChain(llm=llm, prompt=prompt)
 # Generate the image using OpenAI's DALL-E API
 response = requests.post(
     "https://api.openai.com/v1/images/generations",
-    headers={"Authorization": "Bearer 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"},
+    headers={"Authorization": "Bearer API_KEY"},
         json={
         "model": "image-alpha-001",
         "prompt": "Random picture of a" + apiInput,
