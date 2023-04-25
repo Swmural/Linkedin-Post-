@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 import openai
 
 
-from flask import Flask, Response, request, jsonify, json
+from flask import Flask, Response, request, json
 
 from dotenv import load_dotenv
 
